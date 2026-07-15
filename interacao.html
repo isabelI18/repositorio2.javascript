@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>
+        interacao javascript x html
+    </h1>
+    <label for="perfil">perfil</label>
+    <input type="text" id="perfil">
+
+    <br><br>
+    <button onclick="validarPerfil()">verificar</button>
+    <button onclick="limpar()">limpar</button>
+
+
+    <script>
+        function validarPerfil() {
+            // vinculando um elemento hmtl (tag) a uma constante no javascript
+            const inputperfil = document.getElementById('perfil')
+
+            console.log(inputperfil)
+            console.log('valor do input:', inputperfil.value)
+
+            const perfil = inputperfil.value
+            if (perfil == 'adm') {
+                console.log('acesso permitido')
+            } else if (perfil == 'vendas') {
+                console.log('acesso negado')
+            } else if (perfil == 'TI') {
+                console.log('acesso master')
+            }
+            else {
+                console.log('perfil desconhecido')
+            }
+
+        } 
+
+        function limpar(){
+            const inputperfil = document.getElementById('perfil')
+            inputperfil.value = ''
+        }
+
+    </script>
+</body>
+
+</html>

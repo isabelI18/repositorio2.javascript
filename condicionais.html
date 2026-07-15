@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>
+        condicionais em javascript
+    </h1>
+
+
+    <script>
+
+
+        // estruturas condiocionais if
+
+        let idade = 25
+        if (idade >= 18) {
+            console.log('é maior de idade')
+
+        } else if (idade >= 10) {
+            console.log('é menor de idade')
+        }
+
+        // estrutura encadeada
+        let media = 3
+
+        if (media >= 9) {
+            console.log('passou de ano')
+         } else if (media >= 4) {
+            console.log('reprovou')
+        } else {
+            console.log('reprovou!... tente novamente')
+        }
+
+        //estrutura condiocional ternaria
+        let perfil = 'adm'
+
+        const acesso = perfil == 'adm' ? 'acesso permitido' : 'acesso negado'
+
+        console.log('acesso: ', acesso)
+
+        // tipos de comparacao
+        // igualdade: ==
+        //diferenca !=
+        // identico: ===
+        //nao identico: !==
+        //relacionais > >= < <=
+        // operador logico E -> &&
+        // operador logico OU -> ||
+
+        //estrutura condicional SWITCH
+        const codigo = 1
+
+        switch(codigo) {
+            case'1':
+            console.log('setor')
+            break
+            case'2':
+            console.log('setor rh')
+            default:
+            console.log('setor nao identificado')
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
