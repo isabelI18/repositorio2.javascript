@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESCOLA DUREPOX DAS AMÉRICAS</title>
+</head>
+
+<body>
+
+    <style>
+        div {
+            border: 1px solid rgb(128, 0, 255);
+            display: inline-block;
+            padding: 3px;
+        }
+    </style>
+
+
+    <h1>
+        notas escolares
+    </h1>
+    <label for="nome">Nome do Aluno(a)</label>
+    <input type="text" id="nome" placeholder="Ex: Eduardo"><br><br>
+
+    <label for="notas">Notas do Aluno(a)</label>
+    <input type="number" id="notas" placeholder="Ex: 7,5"><br><br>
+
+    <button onclick="">Enviar</button>
+
+    <br><br>
+
+    <div>
+        Aguardando informações...
+    </div>
+
+    <br><br>
+
+    <div>
+
+    </div>
+
+    <script>
+
+
+        function validarAluno() {
+
+            const inputNome = document.getElementById('nome')
+            const inputNotas = documemnt.getElementById('notas')
+
+            console.log('Nome do Aluno(a): ', inputNome)
+            console.log('Notas do Aluno(a): ', inputNotas)
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+</head>
+
+<body>
+    <h1>QUE DIA DA SEMANA É?</h1>
+    <label for="dia">dia</label>
+    <input type="text" id="dia">
+
+    <br><br>
+    <button onclick="validardia()">verificar</button>
+    <button onclick="limpar()">limpar</button>
+
+    <script>
+
+        function validardia() {
+            const inputdia = document.getElementById('dia')
+
+
+            let dia = inputdia.value
+            if (dia == 1) {
+                console.log('entao é domingo')
+            } else if (dia == 2) {
+                console.log('hoje infelizmente é segunda')
+            } else if (dia == 4) {
+                console.log('hoje graças a deus é quarta feira')
+            } else if (dia == 6) {
+                console.log('ebaa hojr é sextaaaa')
+            }
+
+        }
+        function limpar() {
+            const inputdia = document.getElementById('dia')
+            inputdia.value = ''
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>
