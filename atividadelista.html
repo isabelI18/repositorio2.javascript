@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alunos</title>
+
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 30px;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        input {
+            padding: 10px;
+            width: 250px;
+            border: 1px solid rebeccapurple;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            background-color: rebeccapurple;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: purple;
+        }
+
+        #lista {
+            margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            min-height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>LISTA DE ALUNOS</h1>
+
+    <input type="text" id="nome" placeholder="Digite o nome do aluno">
+
+    <br>
+
+    <button onclick="adicionarFinal()">Adicionar no final</button>
+    <button onclick="adicionarInicio()">Adicionar no início</button>
+    <button onclick="removerFinal()">Remover do final</button>
+    <button onclick="removerInicio()">Remover do início</button>
+
+    <div id="lista"></div>
+
+    <script>
+
+        let alunos = [];
+
+        function mostrarLista() {
+            document.getElementById("lista").innerHTML = alunos.join("<br>");
+            console.log(alunos);
+        }
+
+        function adicionarFinal() {
+            let nome = document.getElementById("nome").value;
+
+            console.log("Adicionando no final:", nome);
+
+            alunos.push(nome);
+
+            document.getElementById("nome").value = "";
+
+            mostrarLista();
+        }
+
+        function adicionarInicio() {
+            let nome = document.getElementById("nome").value;
+
+            console.log("Adicionando no início:", nome);
+
+            alunos.unshift(nome);
+
+            document.getElementById("nome").value = "";
+
+            mostrarLista();
+        }
+
+        function removerFinal() {
+            console.log("Removido do final:", alunos.pop());
+
+            mostrarLista();
+        }
+
+        function removerInicio() {
+            console.log("Removido do início:", alunos.shift());
+
+            mostrarLista();
+        }
+
+    </script>
+
+</body>
+
+</html>
