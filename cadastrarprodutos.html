@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 32px;
+        }
+
+        h1 {
+            color: blue;
+        }
+
+        input {
+            background-color: white;
+            padding: 10px;
+            width: 250px;
+            border: 1px solid;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: rgb(135, 222, 155);
+            padding: 10px;
+            width: 100px;
+            border: 1px solid;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        button.houver {}
+
+        .botao {
+            background-color: #96f1f8;
+            margin-top: 20px;
+            border-radius: 8px;
+            padding: 10px;
+            min-height: 100px;
+
+        }
+
+        .caixa {
+            background-color: aliceblue;
+            margin-top: 10px;
+            border-radius: 8px;
+            padding: 10px;
+            min-height: 100px;
+        }
+
+        .divprodutos {
+            display: flex;
+            gap: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Os melhores produtos para você</h1>
+    <h2>Venha explorar !!!!</h2>
+
+    <div class="botao">
+        <input type="text" id="produto" placeholder="Digite o nome do produto">
+        <button onclick="Adicionarproduto()">Novo</button>
+    </div>
+    <div class="divprodutos">
+    </div>
+    <script>
+        const listaprodutos = []
+
+        function Adicionarproduto() {
+            const inputproduto = document.getElementById('produto')
+            const divprodutos = document.getElementById('divprodutos')
+        }
+            if(inputproduto.value == ''){
+                alert('É necessario preencher o campo com nome do produto!!')
+
+            }  else {
+                listaprodutos.push(inputproduto.value)
+
+            let conteudodiv = ''
+            for (const produto of listaprodutos) {
+                divprodutos.innerHTML += `
+               <div>${produto}</div>
+               `
+            }
+            
+            divprodutos.innerHTML = conteudodiv
+
+            inputproduto.value = ''
+            inputproduto.focus()
+        }
+
+    </script>
+
+</body>
+
+</html>
