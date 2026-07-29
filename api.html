@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <h1>consumindo api</h1>
+
+    <script>
+        //funçaõ para realizar a chamada para uma api
+        function obterpersonagem(){
+            
+           fetch('https://rickandmortyapi.com/api/character')
+           .then(resposta => {
+              console.log(resposta)
+               return resposta json()
+           })
+             .then (dadosconvertidos =>
+                {
+                  const info = dadosconvertidos.info
+                  const listapersonagem = dadosconvertidos.results
+                       for(const personagem of listapersonagem)     {
+                        console.log(personagem.image)
+                       }
+                )
+        }
+    </script>
+
+
+</body>
+</html>
